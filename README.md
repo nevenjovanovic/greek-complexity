@@ -6,6 +6,7 @@ We query a set of Greek texts, hand-encoded for morphology and syntax (as treeba
 
 * The encoded texts (Alpheios dependency scheme), cloned from the [Greek-Dependency-Trees](https://github.com/vgorman1/Greek-Dependency-Trees) repository, are in [data](/data) directory
 * Various XQuery scripts to transform and analyze the files are in [scripts](/scripts)
+* Reports made by scripts are in [info](/info)
 
 ## How to use
 
