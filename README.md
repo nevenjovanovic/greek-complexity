@@ -1,27 +1,28 @@
-# Laudationes urbium Dalmaticarum - texts #
+# Linguistic complexity in ancient Greek - Sentence complexity and grammar
 
-TEI XML encoded Latin texts from the Laudationes urbium Dalmaticarum collection, freely available under a [CC-BY license](LICENSE.md).
+We query a set of Greek texts, hand-encoded for morphology and syntax (as treebanks) by Vanessa Gorman, to explore complexity in Greek sentence. The treebanks and queries in this repository are published under a [CC-BY license](LICENSE.md).
 
-The files edited here are published as a [PhiloLogic collection](http://www.ffzg.unizg.hr/klafil/croala/laud.form.html).
+## Contents
 
-## Contents ##
-
-* The TEI XML texts are in [data](/data) directory
-* The tokenized and normalized files are in [normalized](/normalized) directory
-* The RDF Turtle files lemmatized using [LiLa Linking Latin](https://lila-erc.eu/) are in [ttl](/ttl) directory
-* The tokenized, normalized, and lemmatized TEI XML files are in [norm-lemmatized](/norm-lemmatized) directory
-* The markdown versions are in [markdown](/markdown) directory
+* The encoded texts (Alpheios dependency scheme), cloned from the [Greek-Dependency-Trees](https://github.com/vgorman1/Greek-Dependency-Trees) repository, are in [data](/data) directory
 * Various XQuery scripts to transform and analyze the files are in [scripts](/scripts)
 
-## Reports
+## How to use
 
-* Word index to Nardino Celinese's elegy De situ Iadrae (1508): [nardinus-desitu-index](nuntii/nardinus-desitu-index.md)
+Download the files or clone the repository. Install [BaseX XML database](https://basex.org/).
 
-## How to use ##
+In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq) to create the `grc-com` database. Query the database by running other scripts in the [scripts/xq](/scripts/xq) directory. Adapt the scripts to query as needed.
 
-Download the files or clone the repository.
+## A list of queries (from simple to complex)
 
-Adapt the scripts to create databases and manipulate files as needed.
+### Create DB, get some statistics
+
+1. Create the `grc-com` database: [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq)
+2. Get basic information about the database, how many words, sentences, documents: [db-basic-info.xq](/scripts/xq/db-basic-info.xq)
+3. Get stats on sentence length: [db-stats-sentence.xq](/scripts/xq/db-stats-sentence.xq)
+4. Get stats on relations: [db-stats-relations](/scripts/xq/db-stats-relations.xq)
+
+### Retrieve specific syntactic features
 
 ### Editor ###
 
