@@ -37,6 +37,127 @@ TBA
 1. Stats on PRED: [pred-stats.md](/info/pred-stats.md)
 2. Stats on COORD: [coord-stats.md](/info/coord-stats.md)
 
-### Editor ###
+# AGDT data format
+
+```
+     Data Format
+	
+		The data given in this treebank is provided as an XML document.  Each 
+		word contains six required attributes:
+		
+		id: This is a unique identifier, and corresponds to the word's linear 
+		position in the sentence.  The first word in a sentence is given 
+		id 1.
+		
+		cid: This is a canonical identifier for the word within the larger corpus.
+		
+		form: The token form of the word, in Beta Code.
+		
+		lemma: The base lemma from which the word is derived, in Beta Code.
+		
+		head: The id of the word's parent.  If a word depends on the sentence 
+		root, its head is 0.
+		
+		relation: The syntactic relation between the word and its parent.  A 
+		catalogue of syntactic tags can be found in the syntactic guidelines 
+		described below.
+		
+		postag: The morphological analysis for the word.  This field is 9 
+		characters long, and corresponds to the following morphological 
+		features:
+		
+			1: 	part of speech
+			
+				n	noun
+				v	verb
+				t	participle
+				a	adjective
+				d	adverb
+				l	article
+				g	particle
+				c	conjunction
+				r	preposition
+				p	pronoun
+				m	numeral
+				i	interjection
+				e	exclamation
+				u	punctuation
+			
+			2: 	person
+			
+				1	first person
+				2	second person
+				3	third person
+			
+			3: 	number
+			
+				s	singular
+				p	plural
+				d	dual
+			
+			4: 	tense
+			
+				p	present
+				i	imperfect
+				r	perfect
+				l	pluperfect
+				t	future perfect
+				f	future
+				a	aorist
+			
+			5: 	mood
+			
+				i	indicative
+				s	subjunctive
+				o	optative
+				n	infinitive
+				m	imperative
+				p	participle
+			
+			6: 	voice
+			
+				a	active
+				p	passive
+				m	middle
+				e	medio-passive
+			
+			7:	gender
+			
+				m	masculine
+				f	feminine
+				n	neuter
+			
+			8: 	case
+			
+				n	nominative
+				g	genitive
+				d	dative
+				a	accusative
+				v	vocative
+				l	locative
+			
+			9: 	degree
+			
+				c	comparative
+				s	superlative
+			
+			---
+			
+			For example, the postag for the noun "a)/ndra" is "n-s---ma-", 
+			which corresponds to the following features:
+			
+			1: n	noun
+			2: -
+			3: s	singular
+			4: -
+			5: -
+			6: -
+			7: m	masculine
+			8: a	accusative
+			9: -
+
+```
+
+# Editor of this repository
 
 * Neven Jovanović (nevenjovanovic), Department of Classical Philology, Faculty of Humanities and Social Sciences, University of Zagreb; [orcid.org/0000-0002-9119-399X](http://orcid.org/0000-0002-9119-399X)
