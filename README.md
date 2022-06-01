@@ -22,7 +22,14 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 3. Get stats on sentence length: [db-stats-sentence.xq](/scripts/xq/db-stats-sentence.xq)
 4. Get stats on relations: [db-stats-relations](/scripts/xq/db-stats-relations.xq)
 
+### Statistics on syntactic relations
+
+1. Which POS have role of PRED (and similar): [list-pred-types.xq](/scripts/xq/list-pred-types.xq)
+2. Which POS have role of COORD (and similar): [list-coord-types.xq](/scripts/xq/list-coord-types.xq)
+
 ### Retrieve specific syntactic features
+
+# Results
 
 ### Editor ###
 
