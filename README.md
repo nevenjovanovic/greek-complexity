@@ -29,7 +29,13 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 
 ### Retrieve specific syntactic features
 
+TBA
+
 # Results
+
+1. Stats on relations: [relations-stats.md](/info/relations-stats.md)
+1. Stats on PRED: [pred-stats.md](/info/pred-stats.md)
+2. Stats on COORD: [coord-stats.md](/info/coord-stats.md)
 
 ### Editor ###
 
