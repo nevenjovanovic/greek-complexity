@@ -31,6 +31,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 ### Retrieve specific syntactic features
 
 1. Find sentences with 12 words or less where PRED is adjective: [find-sentences-with-pred-adj.xq](/scripts/xq/find-sentences-with-pred-adj.xq)
+2. Find sentences with 12 words or less where PRED is conjunction: [find-sentences-with-pred-conj.xq](/scripts/xq/find-sentences-with-pred-conj.xq)
 
 
 
@@ -40,6 +41,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 1. Stats on PRED: [pred-stats.md](/info/pred-stats.md)
 2. Stats on COORD: [coord-stats.md](/info/coord-stats.md)
 3. Sentences with PRED adjective: [sentences-pred-adj.md](/info/sentences-pred-adj.md)
+4. Sentences with PRED conjunction: [sentences-pred-c.md](/info/sentences-pred-c.md)
 
 # AGDT data format
 
