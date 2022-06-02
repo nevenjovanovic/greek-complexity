@@ -1,6 +1,6 @@
 # Sentences with 12 words or less where PRED is conjunction
 
-XQuery: [find-sentences-with-pred-conj.xq](/scripts/xq/find-sentences-with-pred-conj.xq)
+XQuery: [find-sentences-with-pred-conj.xq](../scripts/xq/find-sentences-with-pred-conj.xq)
 
 <table>
   <thead>
