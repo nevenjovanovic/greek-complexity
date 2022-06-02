@@ -2,6 +2,8 @@
 
 XQuery: [find-sentences-with-pred-conj.xq](../scripts/xq/find-sentences-with-pred-conj.xq)
 
+Most of the results seem to be errors in annotation or results of ellipsis.
+
 <table>
   <thead>
     <tr>
