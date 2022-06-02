@@ -17,7 +17,7 @@ where count($sentence/*:word) <= 12
 return element tr { 
 element td { local:metad($sentence) },
 element td { local:words($sentence) },
-element td { "```" || fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()}) || "```" } 
+element td { fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()}) } 
 }
 return element table { 
 element thead { 
