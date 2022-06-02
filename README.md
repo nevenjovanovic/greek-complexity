@@ -38,6 +38,14 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 
 # Results
 
+<ul>
+  <li>Database: grc-com</li>
+  <li>Date: 2022-06-02+02:00</li>
+  <li>Documents: 153</li>
+  <li>Sentences: 26781</li>
+  <li>Words: 633763</li>
+</ul>
+
 1. Stats on relations: [relations-stats.md](/info/relations-stats.md)
 1. Stats on PRED: [pred-stats.md](/info/pred-stats.md)
 2. Stats on COORD: [coord-stats.md](/info/coord-stats.md)
