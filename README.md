@@ -32,6 +32,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 
 1. Find sentences with 12 words or less where PRED is adjective: [find-sentences-with-pred-adj.xq](/scripts/xq/find-sentences-with-pred-adj.xq)
 2. Find sentences with 12 words or less where PRED is conjunction: [find-sentences-with-pred-conj.xq](/scripts/xq/find-sentences-with-pred-conj.xq)
+3. Find sentences with 15 words or less without PRED: [find-sentences-no-pred.xq](/scripts/xq/find-sentences-no-pred.xq)
 
 
 
@@ -42,6 +43,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 2. Stats on COORD: [coord-stats.md](/info/coord-stats.md)
 3. Sentences with PRED adjective: [sentences-pred-adj.md](/info/sentences-pred-adj.md)
 4. Sentences with PRED conjunction: [sentences-pred-c.md](/info/sentences-pred-c.md)
+5. Sentences without PRED relation: [sentences-no-pred.md](/info/sentences-no-pred.md)
 
 # AGDT data format
 
