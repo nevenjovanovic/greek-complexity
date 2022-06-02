@@ -1,6 +1,6 @@
 # Find sentences with 15 words or less without PRED
 
-XQuery: [find-sentences-no-pred.xq](/scripts/xq/find-sentences-no-pred.xq)
+XQuery: [find-sentences-no-pred.xq](../scripts/xq/find-sentences-no-pred.xq)
 
 Seems to find serious errors in syntactic annotation.
 
