@@ -12,7 +12,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
   </thead>
   <tbody>
     <tr>
-      <td>Plato_Crito_Travis_Kahl.xml / urn:cts:greekLit:tlg0059.tlg003.perseus-grc2 / 49e</td>
+      <td>Plato_Crito_Travis_Kahl.xml 
+\\ urn:cts:greekLit:tlg0059.tlg003.perseus-grc2 
+\\ 49e</td>
       <td>πότερον ἃ ἄν τις ὁμολογήσῃ τῳ δίκαια ὄντα ποιητέον ἢ ἐξαπατητέον ;</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="180" document_id="urn:cts:greekLit:tlg0059.tlg003.perseus-grc2" subdoc="49e" span=""&gt;
       &lt;word id="1" form="πότερον" lemma="πότερον" postag="d-------p" relation="AuxY" head="10"/&gt;
@@ -30,7 +32,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>Plato_Crito_Travis_Kahl.xml / urn:cts:greekLit:tlg0059.tlg003.perseus-grc2 / 49e</td>
+      <td>Plato_Crito_Travis_Kahl.xml 
+\\ urn:cts:greekLit:tlg0059.tlg003.perseus-grc2 
+\\ 49e</td>
       <td>πότερον ἃ ἄν τις ὁμολογήσῃ τῳ δίκαια ὄντα ποιητέον ἢ ἐξαπατητέον ;</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="180" document_id="urn:cts:greekLit:tlg0059.tlg003.perseus-grc2" subdoc="49e" span=""&gt;
       &lt;word id="1" form="πότερον" lemma="πότερον" postag="d-------p" relation="AuxY" head="10"/&gt;
@@ -48,7 +52,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>Plato_Crito_Travis_Kahl.xml / urn:cts:greekLit:tlg0059.tlg003.perseus-grc2 / 49e</td>
+      <td>Plato_Crito_Travis_Kahl.xml 
+\\ urn:cts:greekLit:tlg0059.tlg003.perseus-grc2 
+\\ 49e</td>
       <td>ποιητέον .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="181" document_id="urn:cts:greekLit:tlg0059.tlg003.perseus-grc2" subdoc="49e" span=""&gt;
       &lt;word id="1" form="ποιητέον" lemma="ποιητέος" postag="a-s---ma-" relation="PRED" head="0"/&gt;
@@ -56,7 +62,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>xen cyr 7.4-5 tree.xml / 0032-007 / 7.5.78</td>
+      <td>xen cyr 7.4-5 tree.xml 
+\\ 0032-007 
+\\ 7.5.78</td>
       <td>τὸ μέντοι μετὰ τοῦτο κράτιστον ἡμῖν αὐτοῖς παρασκευαστέον ·</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="252" document_id="0032-007" subdoc="7.5.78"&gt;
       &lt;word id="1" ref="Leuven|0032-007|4059|1" form="τὸ" lemma="ὁ" postag="l-s---nn-" relation="ATR" head="5"/&gt;
@@ -71,7 +79,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>Aristotle Politics book 1 bu1.xml / urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:1 / 1.1253b</td>
+      <td>Aristotle Politics book 1 bu1.xml 
+\\ urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:1 
+\\ 1.1253b</td>
       <td>ὅπως δ᾽ ἔχει , θεωρητέον :</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="65" document_id="urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:1" subdoc="1.1253b" span=""&gt;
       &lt;word id="1" form="ὅπως" lemma="ὅπως" postag="c--------" relation="AuxC" head="5"/&gt;
@@ -83,7 +93,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>Aristotle Politics book 1 bu1.xml / urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:1 / 1.1260b</td>
+      <td>Aristotle Politics book 1 bu1.xml 
+\\ urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:1 
+\\ 1.1260b</td>
       <td>νουθετητέον γὰρ μᾶλλον τοὺς δούλους ἢ τοὺς παῖδας . νουθετητέον</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="325" document_id="urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:1" subdoc="1.1260b" span=""&gt;
       &lt;word id="1" form="νουθετητέον" lemma="νουθετητέος" postag="a-s---nn-" relation="PRED" head="0"/&gt;
@@ -99,7 +111,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>antiphon 2 bu2.xml / urn:cts:greekLit:tlg0028.tlg002.perseus-grc1 / 2.4</td>
+      <td>antiphon 2 bu2.xml 
+\\ urn:cts:greekLit:tlg0028.tlg002.perseus-grc1 
+\\ 2.4</td>
       <td>ὅμως δὲ καὶ τοῦτο ἐπιχειρητέον :</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="46" document_id="urn:cts:greekLit:tlg0028.tlg002.perseus-grc1" subdoc="2.4" span=""&gt;
       &lt;word id="1" form="ὅμως" lemma="ὅμως" postag="d--------" relation="AuxY" head="5"/&gt;
@@ -111,7 +125,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>polybius 2_51-60 bu1.xml / urn:cts:greekLit:tlg0543.tlg001.perseus-grc1 / 2.53.3</td>
+      <td>polybius 2_51-60 bu1.xml 
+\\ urn:cts:greekLit:tlg0543.tlg001.perseus-grc1 
+\\ 2.53.3</td>
       <td>ὃ δὴ καὶ νομιστέον αἰτιώτατον γεγονέναι πραγμάτων κατορθώσεως .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="17" document_id="urn:cts:greekLit:tlg0543.tlg001.perseus-grc1" subdoc="2.53.3" span=""&gt;
       &lt;word id="1" form="ὃ" lemma="ὅς" postag="p-s---na-" relation="SBJ" head="6"/&gt;
@@ -126,7 +142,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>polybius 6 2-15 bu1.xml / urn:cts:greekLit:tlg0543.tlg001.perseus-grc1 / 6.3.9</td>
+      <td>polybius 6 2-15 bu1.xml 
+\\ urn:cts:greekLit:tlg0543.tlg001.perseus-grc1 
+\\ 6.3.9</td>
       <td>καὶ μὴν οὐδʼ ὡς μόνας ταύτας προσδεκτέον ·</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="21" document_id="urn:cts:greekLit:tlg0543.tlg001.perseus-grc1" subdoc="6.3.9" span=""&gt;
       &lt;word id="1" form="καὶ" lemma="καί" postag="d--------" relation="AuxZ" head="2"/&gt;
@@ -140,7 +158,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>xen_cyr_2_1-2 tree.xml / 0032-007 / 2.1.4</td>
+      <td>xen_cyr_2_1-2 tree.xml 
+\\ 0032-007 
+\\ 2.1.4</td>
       <td>ἀγωνιστέον μὲν ἄρα ἡμῖν πρὸς τοὺς ἄνδρας .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="17" document_id="0032-007" subdoc="2.1.4"&gt;
       &lt;word id="1" ref="Leuven|0032-007|695|1" form="ἀγωνιστέον" lemma="ἀγωνίζω" postag="a-s---nn-" relation="PRED" head="0"/&gt;
@@ -154,7 +174,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>athen13 60-69 2019.xml / urn:cts:greekLit:tlg0008.tlg001.perseus-grc1 / 13.62</td>
+      <td>athen13 60-69 2019.xml 
+\\ urn:cts:greekLit:tlg0008.tlg001.perseus-grc1 
+\\ 13.62</td>
       <td>γραπτέον Ναὶς καὶ οὐ Λαΐς .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="35" document_id="urn:cts:greekLit:tlg0008.tlg001.perseus-grc1" subdoc="13.62" span="γραπτέον0:.5"&gt;
       &lt;word id="1" form="γραπτέον" lemma="γραπτέος" postag="a-s---nn-" relation="PRED" head="0"/&gt;
@@ -166,7 +188,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>polybius 6 31-45 bu1.xml / urn:cts:greekLit:tlg0543.tlg001.perseus-grc2 / 6.44.1</td>
+      <td>polybius 6 31-45 bu1.xml 
+\\ urn:cts:greekLit:tlg0543.tlg001.perseus-grc2 
+\\ 6.44.1</td>
       <td>τὸ δὲ παραπλήσιον καὶ περὶ τῆς Ἀθηναίων πολιτείας διαληπτέον .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="160" document_id="urn:cts:greekLit:tlg0543.tlg001.perseus-grc2" subdoc="6.44.1" span=""&gt;
       &lt;word id="1" form="τὸ" lemma="ὁ" postag="l-s---na-" relation="ATR" head="3"/&gt;
@@ -182,7 +206,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>xen cyr 8_5-7 bu1.xml / urn:cts:greekLit:tlg0032.tlg007.perseus-grc2 / 8.6.6</td>
+      <td>xen cyr 8_5-7 bu1.xml 
+\\ urn:cts:greekLit:tlg0032.tlg007.perseus-grc2 
+\\ 8.6.6</td>
       <td>καὶ γὰρ ἤν τί που δεινὸν γίγνηται , ἡμῖν ἔσται ἀμυντέον .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="93" document_id="urn:cts:greekLit:tlg0032.tlg007.perseus-grc2" subdoc="8.6.6" span=""&gt;
       &lt;word id="1" form="καὶ" lemma="καί" postag="d--------" relation="AuxY" head="11"/&gt;
@@ -200,7 +226,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>polybius 9_1-20 bu1.xml / urn:cts:greekLit:tlg0543.tlg001.perseus-grc1 / 9.19.5</td>
+      <td>polybius 9_1-20 bu1.xml 
+\\ urn:cts:greekLit:tlg0543.tlg001.perseus-grc1 
+\\ 9.19.5</td>
       <td>ἐκ μὲν οὖν ἀστρολογίας μέχρι τῶν προειρημένων πολυπραγμονητέον .</td>
       <td>```&lt;sentence id="178" document_id="urn:cts:greekLit:tlg0543.tlg001.perseus-grc1" subdoc="9.19.5" span=""&gt;
       &lt;word id="1" form="ἐκ" lemma="ἐκ" postag="r--------" relation="AuxP" head="8"/&gt;
@@ -215,7 +243,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>plato apology.xml / http://perseids.org/annotsrc/urn:cts:greekLit:tlg0059.tlg002.perseus-grc1 / 22b</td>
+      <td>plato apology.xml 
+\\ http://perseids.org/annotsrc/urn:cts:greekLit:tlg0059.tlg002.perseus-grc1 
+\\ 22b</td>
       <td>ὅμως δὲ ῥητέον .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="106" document_id="http://perseids.org/annotsrc/urn:cts:greekLit:tlg0059.tlg002.perseus-grc1" subdoc="22b" span=""&gt;
       &lt;word id="1" form="ὅμως" lemma="ὅμως" postag="d--------" relation="AuxY" head="3"/&gt;
@@ -225,7 +255,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>Aristotle Politics book 2 bu2.xml / urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:2 / 2.1260b</td>
+      <td>Aristotle Politics book 2 bu2.xml 
+\\ urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:2 
+\\ 2.1260b</td>
       <td>ἀρχὴν δὲ πρῶτον ποιητέον ἥπερ πέφυκεν ἀρχὴ ταύτης τῆς σκέψεως .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="2" document_id="urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:2" subdoc="2.1260b" span=""&gt;
       &lt;word id="1" form="ἀρχὴν" lemma="ἀρχή" postag="n-s---fa-" relation="OBJ" head="4"/&gt;
@@ -242,7 +274,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>Aristotle Politics book 2 bu2.xml / urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:2 / 2.1261a</td>
+      <td>Aristotle Politics book 2 bu2.xml 
+\\ urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:2 
+\\ 2.1261a</td>
       <td>ὥστ᾽ εἰ καὶ δυνατός τις εἴη τοῦτο δρᾶν , οὐ ποιητέον :</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="17" document_id="urn:cts:greekLit:tlg0086.tlg035.perseus-grc1:2" subdoc="2.1261a" span=""&gt;
       &lt;word id="1" form="ὥστ᾽" lemma="ὥστε" postag="d--------" relation="AuxY" head="11"/&gt;
@@ -260,7 +294,9 @@ Find sentences with 12 words or less where PRED is adjective. XQuery: [find-sent
    &lt;/sentence&gt;```</td>
     </tr>
     <tr>
-      <td>xen symp 3-4.xml / urn:cts:greekLit:tlg0032.tlg004.perseus-grc2 / 3.9</td>
+      <td>xen symp 3-4.xml 
+\\ urn:cts:greekLit:tlg0032.tlg004.perseus-grc2 
+\\ 3.9</td>
       <td>ἀκουστέον ἂν εἴη καὶ σοῦ .</td>
       <td>```&lt;sentence xmlns:saxon="http://saxon.sf.net/" id="43" document_id="urn:cts:greekLit:tlg0032.tlg004.perseus-grc2" subdoc="3.9" span=""&gt;
       &lt;word id="1" ref="8985538" form="ἀκουστέον" lemma="ἀκούω" postag="a-s---nn-" relation="PRED" head="0"/&gt;
