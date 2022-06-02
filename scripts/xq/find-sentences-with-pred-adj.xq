@@ -3,9 +3,9 @@
 declare variable $db := ( 
 "grc-com"
 ) ;
-declare function local:metad ($s) { db:path($s) || " 
-\\ " || $s/@document_id || " 
-\\ " || $s/@subdoc };
+declare function local:metad ($s) { element p { db:path($s) }, 
+element p { $s/@document_id/string() },
+element p { $s/@subdoc/string() } };
 declare function local:words ($s) { 
 for $w in $s/*:word
 return $w/@form/string()
