@@ -34,6 +34,16 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 2. Find sentences with 12 words or less where PRED is conjunction: [find-sentences-with-pred-conj.xq](/scripts/xq/find-sentences-with-pred-conj.xq)
 3. Find sentences with 15 words or less without PRED: [find-sentences-no-pred.xq](/scripts/xq/find-sentences-no-pred.xq)
 4. Find sentences with 12 words or less where the article is not ATR (or its variations): [find-article-not-atr.xq](/scripts/xq/find-article-not-atr.xq)
+5. Find sentences with COORD by asyndeton (u): [find-coord-sentences-asyndeton.xq](/scripts/xq/find-coord-sentences-asyndeton.xq)
+1. Find sentences with COORD (coordination)
+5. Find infinitive used as PRED
+2. List syntactic roles of participles
+3. Find substantivated participles
+9. Find sentences with substantivation (of infinitives and other forms)
+7. Find sentences without OBJ, PNOM, SBJ (and combinations)
+6. Find sentences without AuxY
+8. Find sentences with many AuxY
+4. Find verbs ruling PNOM which appear without PNOM as well
 
 
 # Results
@@ -53,6 +63,8 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 4. Sentences with PRED conjunction: [sentences-pred-c.md](/info/sentences-pred-c.md)
 5. Sentences without PRED relation: [sentences-no-pred.md](/info/sentences-no-pred.md)
 6. Sentences where the article is not ATR: [sentences-article-not-atr.md](/info/sentences-article-not-atr.md)
+7. Sentences with COORD performed by punctuation (asyndeton): [sentences-coord-asyndeton.md](/info/sentences-coord-asyndeton.md)
+
 # AGDT data format
 
 ```
