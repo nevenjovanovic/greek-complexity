@@ -36,7 +36,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 4. Find sentences with 12 words or less where the article is not ATR (or its variations): [find-article-not-atr.xq](/scripts/xq/find-article-not-atr.xq)
 5. Find sentences with COORD by asyndeton (u): [find-coord-sentences-asyndeton.xq](/scripts/xq/find-coord-sentences-asyndeton.xq)
 1. Find sentences with PRED_CO: [find-coord-pred-co.xq](/scripts/xq/find-coord-pred-co.xq)
-5. Find infinitive used as PRED
+5. Find infinitive used as PRED: [find-pred-inf.xq](/scripts/xq/find-pred-inf.xq)
 2. List syntactic roles of participles
 3. Find substantivated participles
 9. Find sentences with substantivation (of infinitives and other forms)

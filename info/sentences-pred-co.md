@@ -1,6 +1,6 @@
 # Find sentences with PRED_CO
 
-XQuery: [find-coord-pred-co.xq](/scripts/xq/find-coord-pred-co.xq)
+XQuery: [find-coord-pred-co.xq](../scripts/xq/find-coord-pred-co.xq)
 
 <table>
   <thead>
