@@ -42,7 +42,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 7. Find sentences without OBJ, PNOM, SBJ (and combinations): [](/scripts/xq/)
 2. List syntactic roles of participles with frequencies of occurrences: [find-participles-roles.xq](/scripts/xq/find-participles-roles.xq)
 3. Find substantivated participles: [find-participles-substantivated.xq](/scripts/xq/find-participles-substantivated.xq)
-9. Find sentences with substantivation (of infinitives and other forms): [](/scripts/xq/)
+9. Find sentences where article is head: [find-sentences-with-subst-expr.xq](/scripts/xq/find-sentences-with-subst-expr.xq)
 10. Find sentences with transitive verbs as PRED without OBJ: [find-sentences-no-obj.xq](/scripts/xq/find-sentences-no-obj.xq)
 4. Find verbs ruling PNOM which appear without PNOM as well: [](/scripts/xq/)
 
@@ -72,6 +72,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 12. Sentences with transitive verbs (active) as PRED, no OBJ: [sentences-trans-no-obj.md](/info/sentences-trans-no-obj.md)
 13. Syntactic roles of participles: [roles-participles.md](/info/roles-participles.md)
 14. Sentences with substantivated participles: [subst-participles.md](/info/subst-participles.md)
+15. Sentences where article is head: [article-head.md](/info/article-head.md)
 
 # AGDT data format
 
