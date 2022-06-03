@@ -40,7 +40,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 6. Find sentences without AuxY: [find-sentences-no-auxy.xq](/scripts/xq/find-sentences-no-auxy.xq)
 8. Find sentences with many AuxY: [find-sentences-with-many-auxy.xq](/scripts/xq/find-sentences-with-many-auxy.xq)
 7. Find sentences without OBJ, PNOM, SBJ (and combinations): [](/scripts/xq/)
-2. List syntactic roles of participles: [](/scripts/xq/)
+2. List syntactic roles of participles with frequencies of occurrences: [find-participles-roles.xq](/scripts/xq/find-participles-roles.xq)
 3. Find substantivated participles: [](/scripts/xq/)
 9. Find sentences with substantivation (of infinitives and other forms): [](/scripts/xq/)
 10. Find sentences with transitive verbs as PRED without OBJ: [find-sentences-no-obj.xq](/scripts/xq/find-sentences-no-obj.xq)
@@ -70,6 +70,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 10. Sentences without AuxY (particles): [sentences-no-auxy.md](/info/sentences-no-auxy.md)
 11. Sentences with many AuxY: [sentences-many-auxy.md](/info/sentences-many-auxy.md)
 12. Sentences with transitive verbs (active) as PRED, no OBJ: [sentences-trans-no-obj.md](/info/sentences-trans-no-obj.md)
+13. Syntactic roles of participles: [roles-participles.md](/info/roles-participles.md)
 
 # AGDT data format
 
