@@ -43,6 +43,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 2. List syntactic roles of participles: [](/scripts/xq/)
 3. Find substantivated participles: [](/scripts/xq/)
 9. Find sentences with substantivation (of infinitives and other forms): [](/scripts/xq/)
+10. Find sentences with transitive verbs as PRED without OBJ: [find-sentences-no-obj.xq](/scripts/xq/find-sentences-no-obj.xq)
 4. Find verbs ruling PNOM which appear without PNOM as well: [](/scripts/xq/)
 
 
@@ -68,6 +69,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 9. Sentences with infinitives used as PRED: [sentences-inf-pred.md](/info/sentences-inf-pred.md)
 10. Sentences without AuxY (particles): [sentences-no-auxy.md](/info/sentences-no-auxy.md)
 11. Sentences with many AuxY: [sentences-many-auxy.md](/info/sentences-many-auxy.md)
+12. Sentences with transitive verbs (active) as PRED, no OBJ: [sentences-trans-no-obj.md](sentences-trans-no-obj.md)
 
 # AGDT data format
 
