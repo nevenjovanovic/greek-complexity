@@ -37,13 +37,13 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 5. Find sentences with COORD by asyndeton (u): [find-coord-sentences-asyndeton.xq](/scripts/xq/find-coord-sentences-asyndeton.xq)
 1. Find sentences with PRED_CO: [find-coord-pred-co.xq](/scripts/xq/find-coord-pred-co.xq)
 5. Find infinitive used as PRED: [find-pred-inf.xq](/scripts/xq/find-pred-inf.xq)
-2. List syntactic roles of participles
-3. Find substantivated participles
-9. Find sentences with substantivation (of infinitives and other forms)
-7. Find sentences without OBJ, PNOM, SBJ (and combinations)
-6. Find sentences without AuxY
-8. Find sentences with many AuxY
-4. Find verbs ruling PNOM which appear without PNOM as well
+6. Find sentences without AuxY: [find-sentences-no-auxy.xq](/scripts/xq/find-sentences-no-auxy.xq)
+8. Find sentences with many AuxY: [](/scripts/xq/)
+7. Find sentences without OBJ, PNOM, SBJ (and combinations): [](/scripts/xq/)
+2. List syntactic roles of participles: [](/scripts/xq/)
+3. Find substantivated participles: [](/scripts/xq/)
+9. Find sentences with substantivation (of infinitives and other forms): [](/scripts/xq/)
+4. Find verbs ruling PNOM which appear without PNOM as well: [](/scripts/xq/)
 
 
 # Results
@@ -65,6 +65,8 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 6. Sentences where the article is not ATR: [sentences-article-not-atr.md](/info/sentences-article-not-atr.md)
 7. Sentences with COORD performed by punctuation (asyndeton): [sentences-coord-asyndeton.md](/info/sentences-coord-asyndeton.md)
 8. Sentences with PRED_CO: [sentences-pred-co.md](/info/sentences-pred-co.md)
+9. Sentences with infinitives used as PRED: [sentences-inf-pred.md](/info/sentences-inf-pred.md)
+10. Sentences without AuxY (particles): [sentences-no-auxy.md](/info/sentences-no-auxy.md)
 
 # AGDT data format
 
