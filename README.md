@@ -43,8 +43,8 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 2. List syntactic roles of participles with frequencies of occurrences: [find-participles-roles.xq](/scripts/xq/find-participles-roles.xq)
 3. Find substantivated participles: [find-participles-substantivated.xq](/scripts/xq/find-participles-substantivated.xq)
 9. Find sentences where article is head: [find-sentences-with-subst-expr.xq](/scripts/xq/find-sentences-with-subst-expr.xq)
-10. Find sentences with transitive verbs as PRED without OBJ: [find-sentences-no-obj.xq](/scripts/xq/find-sentences-no-obj.xq)
-4. Find verbs ruling PNOM which appear without PNOM as well: [](/scripts/xq/)
+10. Find sentences with transitive verbs as PRED without OBJ: [find-sentences-no-obj.xq](/scripts/xq/find-sentences-no-obj.xq); the list of transitive verbs was compiled with [find-verbs-obj.xq](/scripts/xq/find-verbs-obj.xq)
+4. Find verbs ruling PNOM which appear without PNOM as well: [find-sentences-no-pnom.xq](/scripts/xq/find-sentences-no-pnom.xq); the list of verbs ruling PNOM was compiled with [find-pnom-pred.xq](/scripts/xq/find-pnom-pred.xq)
 
 
 # Results
@@ -73,8 +73,11 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 13. Syntactic roles of participles: [roles-participles.md](/info/roles-participles.md)
 14. Sentences with substantivated participles: [subst-participles.md](/info/subst-participles.md)
 15. Sentences where article is head: [article-head.md](/info/article-head.md)
+16. Sentences with verbs taking PNOM in which the verbs are PRED but have no PNOM: [pnom-no-pnom.md](/info/pnom-no-pnom.md)
 
 # AGDT data format
+
+For syntactic roles, see the description by Giuseppe G. A. Celano, [Guidelines for the Ancient Greek Dependency Treebank 2.0](https://github.com/PerseusDL/treebank_data/blob/master/AGDT2/guidelines/Greek_guidelines.md).
 
 ```
      Data Format
@@ -88,7 +91,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 		
 		cid: This is a canonical identifier for the word within the larger corpus.
 		
-		form: The token form of the word, in Beta Code.
+		form: The token form of the word.
 		
 		lemma: The base lemma from which the word is derived, in Beta Code.
 		

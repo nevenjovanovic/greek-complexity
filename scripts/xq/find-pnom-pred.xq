@@ -1,5 +1,6 @@
 (: find sentences with PNOM, exclude "εἰμί" :)
-(: finds 448 results :)
+(: return verbs which are PRED there :)
+(: finds 1622 results :)
 declare variable $db := ( 
 "grc-com"
 ) ;
@@ -10,12 +11,14 @@ return $w/@form/string()
  };
 let $result :=
 
-for $w in db:open($db)//*:word[@relation="PNOM"]
+for $w in db:open($db)//*:word[@relation=("PNOM","PNOM_AP","PNOM_AP_CO","PNOM_CO")]
 let $sentence := $w/parent::*:sentence
-where count($sentence/*:word) <= 12 and not($sentence[*:word[@lemma=("εἰμί","εἰμί","εἰμί")]])
-return element tr { 
-element td { local:metad($sentence) },
-element td { local:words($sentence) },
-element td { $sentence }
-}
-return $result
+let $pred := $sentence/*:word[@relation=("PRED","PRED_CO","PRED_AP_CO","PRED_AP","PRED_CO_CO")]
+where not($sentence[*:word[@lemma=("εἰμί","εἰμί","εἰμί","εἰμί") and @relation=("PRED","PRED_CO","PRED_AP_CO","PRED_AP","PRED_CO_CO")]])
+return $pred/@lemma/string()
+let $verbs := distinct-values(
+for $r in $result
+order by $r collation "?lang=el"
+return $r )
+for $v in $verbs
+return element td { $v }
