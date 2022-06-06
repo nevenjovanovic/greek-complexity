@@ -13,7 +13,7 @@ let $result :=
 
 for $w in db:open($db)//*:word[@relation=("COORD","COORD_CO","COORD_ExD0_ADV") and @postag="u--------"]
 let $sentence := $w/parent::*:sentence
-where count($sentence/*:word) <= 12
+where count($sentence/*:word) <= 15 and not($sentence[*:word[@postag="c--------"]])
 return element tr { 
 element td { local:metad($sentence) },
 element td { local:words($sentence) },
