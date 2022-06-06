@@ -65,6 +65,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 1. Stats on PRED: [pred-stats.md](/info/pred-stats.md)
 2. Stats on COORD: [coord-stats.md](/info/coord-stats.md)
 3. Sentences with all basic roles (PRED, SBJ, OBJ, ADV) expressed: [sentences-basic-roles.md](/info/sentences-basic-roles.md)
+4. Sentences with ellipsis (artificially added elements), 6 sentence elements: [sentences-ellipsis-6.md](/info/sentences-ellipsis-6.md)
 3. Sentences with PRED adjective: [sentences-pred-adj.md](/info/sentences-pred-adj.md)
 4. Sentences with PRED conjunction: [sentences-pred-c.md](/info/sentences-pred-c.md)
 5. Sentences without PRED relation: [sentences-no-pred.md](/info/sentences-no-pred.md)
