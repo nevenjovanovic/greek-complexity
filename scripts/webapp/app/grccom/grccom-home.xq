@@ -34,7 +34,7 @@ declare
   
 <div class="container">
 <div class="content is-large">
-	{ let $map := map { "grccom-basic": "Basic information on treebanks", "grccom-subset-sent/12/18": "Retrieve a subset of sentences", "grccom-subset-sent-no-ptc/12/18": "Retrieve a subset of sentences without participles", "grccom-subset-sent-no-ptcauxc/12/18": "Retrieve a subset of sentences without participles and subordinate conjunctions", "grccom-subset-sent-some-co/10/12/PNOM": "Retrieve a subset of sentences where some word has PNOM_CO function" }
+	{ let $map := map { "grccom-basic": "Basic information on treebanks", "grccom-subset-sent/12/18": "Retrieve a subset of sentences", "grccom-subset-sent-no-ptc/12/18": "Retrieve a subset of sentences without participles", "grccom-subset-sent-no-ptcauxc/12/18": "Retrieve a subset of sentences without participles and subordinate conjunctions", "grccom-subset-sent-some-co/10/12/PNOM": "Retrieve a subset of sentences where some word has PNOM_CO function", "grccom-pred-coord-0/16": "Retrieve a subset based on number of words, with PRED and COORD dependent on sentence root" }
   let $list := map:for-each(
     $map ,
   function($key, $value) { element li {
