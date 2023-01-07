@@ -96,6 +96,22 @@ element td { element pre {
 }
 };
 
+(: for a word count limit, find sentences where both PRED and COORD have head=0 :)
+
+declare function grccom-analysis:predcoord0($to){
+  for $sentence in db:open($grccom-analysis:db)//*:sentence[(not(*:word[@insertion_id]) or not(*:word[@artificial])) and *:word[@relation="COORD" and @head="0"]]
+where $sentence/*:word[@relation="PRED" and @head="0"] and count($sentence/*:word[not(@lemma="punc1")]) <= $to
+return element tr { 
+element td { element p { 
+attribute class { "box is-size-6" },
+grccom-analysis:metad($sentence) }, 
+grccom-analysis:words($sentence) },
+element td { element pre {
+  fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()})
+} }
+}
+};
+
 (: add header row with results count :)
 declare function grccom-analysis:countresult($function){
   element div {

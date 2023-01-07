@@ -35,6 +35,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 1. Find sentences with 12 words or less where PRED is adjective: [find-sentences-with-pred-adj.xq](/scripts/xq/find-sentences-with-pred-adj.xq)
 2. Find sentences with 12 words or less where PRED is conjunction: [find-sentences-with-pred-conj.xq](/scripts/xq/find-sentences-with-pred-conj.xq)
 3. Find sentences with 15 words or less without PRED: [find-sentences-no-pred.xq](/scripts/xq/find-sentences-no-pred.xq)
+6. Sentences with PRED and COORD dependent on sentence root: [find-pred-coord-0.xq](/scripts/xq/find-pred-coord-0.xq)
 4. Find sentences with 12 words or less where the article is not ATR (or its variations): [find-article-not-atr.xq](/scripts/xq/find-article-not-atr.xq)
 5. Find sentences with COORD by asyndeton (u): [find-coord-sentences-asyndeton.xq](/scripts/xq/find-coord-sentences-asyndeton.xq)
 1. Find sentences with PRED_CO: [find-coord-pred-co.xq](/scripts/xq/find-coord-pred-co.xq)
@@ -90,6 +91,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 1. [Retrieve a subset of sentences](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent/12/18)
 2. [Retrieve a subset of sentences without participles and subordinate conjunctions](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptcauxc/12/18)
 3. [Retrieve a subset of sentences without participles](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptc/12/18)
+4. [Retrieve a subset based on number of words, with PRED and COORD dependent on sentence root](https://croala.ffzg.unizg.hr/basex/grccom-pred-coord-0/16)
 4. [Basic information on treebanks](https://croala.ffzg.unizg.hr/basex/grccom-basic)
 
 # AGDT data format
