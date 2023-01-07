@@ -80,3 +80,28 @@ element td { element pre {
 } }
 }
 };
+
+(: select a subset with some _CO :)
+declare function grccom-analysis:select-co($from , $to, $co){
+  for $sentence in db:open($grccom-analysis:db)//*:sentence[(not(*:word[@insertion_id]) or not(*:word[@artificial])) and *:word[matches(@relation, ($co || "_CO$"))]]
+where $from <= count($sentence/*:word[not(@lemma="punc1")]) and count($sentence/*:word[not(@lemma="punc1")]) <= $to
+return element tr { 
+element td { element p { 
+attribute class { "box is-size-6" },
+grccom-analysis:metad($sentence) }, 
+grccom-analysis:words($sentence) },
+element td { element pre {
+  fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()})
+} }
+}
+};
+
+(: add header row with results count :)
+declare function grccom-analysis:countresult($function){
+  element table { 
+element thead { 
+element tr {
+  element td { "Treebanks (total: " || count($function/*:td[1])  || ")" }
+}},
+element tbody { $function } }
+};
