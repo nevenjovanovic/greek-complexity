@@ -98,10 +98,14 @@ element td { element pre {
 
 (: add header row with results count :)
 declare function grccom-analysis:countresult($function){
+  element div {
+    attribute class { "table-container"} ,
   element table { 
+  attribute class { "table"},
 element thead { 
 element tr {
-  element td { "Treebanks (total: " || count($function/*:td[1])  || ")" }
-}},
-element tbody { $function } }
+  element td { element p { "Results (source)" }
+},
+element td { element p { "Treebanks (total: " || count($function/*:td[1])  || ")" } } } },
+element tbody { $function } } }
 };
