@@ -38,6 +38,7 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 4. Find sentences with 12 words or less where the article is not ATR (or its variations): [find-article-not-atr.xq](/scripts/xq/find-article-not-atr.xq)
 5. Find sentences with COORD by asyndeton (u): [find-coord-sentences-asyndeton.xq](/scripts/xq/find-coord-sentences-asyndeton.xq)
 1. Find sentences with PRED_CO: [find-coord-pred-co.xq](/scripts/xq/find-coord-pred-co.xq)
+2. Find sentences with some number of words where some word has some _CO function: [find-suffix-co.xq](/scripts/xq/find-suffix-co.xq)
 5. Find infinitive used as PRED: [find-pred-inf.xq](/scripts/xq/find-pred-inf.xq)
 6. Find sentences without AuxY: [find-sentences-no-auxy.xq](/scripts/xq/find-sentences-no-auxy.xq)
 8. Find sentences with many AuxY: [find-sentences-with-many-auxy.xq](/scripts/xq/find-sentences-with-many-auxy.xq)
@@ -83,6 +84,13 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 15. Sentences with substantivated infinitives: [subst-inf.md](/info/subst-inf.md)
 15. Sentences where article is head: [article-head.md](/info/article-head.md)
 16. Sentences with verbs taking PNOM in which the verbs are PRED but have no PNOM: [pnom-no-pnom.md](/info/pnom-no-pnom.md)
+
+# On a server
+
+1. [Retrieve a subset of sentences](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent/12/18)
+2. [Retrieve a subset of sentences without participles and subordinate conjunctions](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptcauxc/12/18)
+3. [Retrieve a subset of sentences without participles](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptc/12/18)
+4. [Basic information on treebanks](https://croala.ffzg.unizg.hr/basex/grccom-basic)
 
 # AGDT data format
 
