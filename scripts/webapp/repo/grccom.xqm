@@ -1,4 +1,4 @@
-(: XQuery module for Modruski :)
+(: XQuery module for Greek complexity, mostly HTML transformations :)
 module namespace grccom = 'http://croala.ffzg.unizg.hr/grccom';
 import module namespace grccom-analysis = "http://croala.ffzg.unizg.hr/grccom-analysis" at "grccom-analysis.xqm";
 
@@ -18,6 +18,24 @@ declare function grccom:htmlheadserver($title, $content, $keywords) {
 </head>
 
 };
+
+(: helper function for header, with meta :)
+declare function grccom:htmlheadchota($title, $content, $keywords) {
+  (: return html template to be filled with title :)
+  (: title should be declared as variable in xq :)
+(: use Chota CSS :)
+<head><title> { $title } </title>
+<meta name="keywords" content="{ $keywords }"/>
+<meta name="description" content="{$content}"/>
+<meta name="revised" content="{ current-date()}"/>
+<meta name="author" content="Neven Jovanović, CroALa" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" href="../../static/gfx/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://unpkg.com/chota@latest" />
+</head>
+
+};
+
 
 (: format page title :)
 declare function grccom:pagetitle ($title, $subtitle) {
@@ -44,6 +62,33 @@ declare function grccom:pagetitle ($title, $subtitle) {
 </div> )
 };
 
+(: format page title :)
+declare function grccom:pagetitlechota ($title, $subtitle) {
+  ( <div class="container">
+    <div class="row">
+    <div class="col">
+<h1 class="text-success"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>{ $title }</h1>
+<p class="text-grey"> { $subtitle }, { current-date() }.</p>
+</div>
+</div>
+<div class="row">
+     <div class="col">
+      <div class="card bd-error">
+     <p><a href="https://orcid.org/0000-0002-0438-6049">Nina Čengić</a><br/>
+     <a href="http://orcid.org/0000-0002-9119-399X">Neven Jovanović</a><br/>
+     <a href="https://orcid.org/0000-0003-2502-7704">Petra Matović</a></p>
+     </div>
+     </div>
+     <div class="col">
+     <div class="card bg-light">
+      We query a set of Greek texts, hand-encoded for morphology and syntax (as treebanks) by <a href="https://doi.org/10.5281/zenodo.3596076">Vanessa Gorman</a>, to explore complexity in Greek sentence.
+  </div>
+  </div>
+  </div>
+</div> )
+};
+
+
 (: formatting - footer :)
 declare function grccom:footerserver () {
 let $f := <footer class="footer">
@@ -65,28 +110,47 @@ let $f := <footer class="footer">
 return $f
 };
 
-(: show a subset of sentences :)
+(: formatting - footer :)
+declare function grccom:footerchota () {
+let $f := <footer class="container">
+<div class="row">
+<div class="col">
+<p class="text-center"><strong>Kompleksnost u grčkoj rečenici | Greek sentence complexity</strong></p>
+</div>
+</div>
+<div class="row">
+<div class="col text-center">
+<p>Nina Čengić, Neven Jovanović, Petra Matović</p></div>
+<div class="col text-center">
+<p>Odsjek za klasičnu filologiju</p>
+<p><a href="http://www.ffzg.unizg.hr"><img src="/static/gfx/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> Filozofski fakultet</a> Sveučilišta u Zagrebu</p></div>
+<div class="col text-center">
+<p><a href="https://github.com/nevenjovanovic/greek-complexity">Github repository</a> for the Greek sentence complexity project</p></div>
+</div>
+<div class="row"><div class="col text-center">
+<a href="https://jenil.github.io/chota/">Made with Chota.
+</a></div>
+</div>
+</footer>
+return $f
+};
+
+(: show a subset of sentences, format as table :)
 declare function grccom:showsubset($from, $to){
   let $result := grccom-analysis:selectsents($from, $to)
-return element div {
-  attribute class {
-    "table-container"
-  },
-  element table { 
-attribute class { "table is-striped is-hoverable"},
-element thead { 
-element tr {
-  element td { "Text"},
-  element td { "Treebanks (total: " || format-number(count($result/td[1]), ",###")  || " of " || format-number(grccom-analysis:counttreebanks (), ",###") || ")" }
-}},
-element tbody { $result } }
-}
+return grccom:table($result)
 };
 
-(: show a subset of sentences without participles :)
+(: show a subset of sentences without participles, format as table :)
 declare function grccom:showsubsetnoptcp($from, $to){
-  let $result := grccom-analysis:selectnopart($from, $to)
-return element div {
+let $result := grccom-analysis:selectnopart($from, $to)
+return grccom:table($result)
+};
+
+(: format HTML table for Bulma :)
+(: result is structured as tr / td / content :)
+declare function grccom:table($result){
+  element div {
   attribute class {
     "table-container"
   },
@@ -101,20 +165,63 @@ element tbody { $result } }
 }
 };
 
-(: show a subset of sentences without participles and AuxC relations :)
+(: format HTML table for Bulma, for lemmata :)
+(: result is structured as tr / td / content :)
+declare function grccom:table2($result){
+  element div {
+  attribute class {
+    "table-container"
+  },
+  element table { 
+attribute class { "table is-striped is-hoverable"},
+element thead { 
+element tr {
+  element td { "Lemma (Total: " || count($result//tr)},
+  element td { "Frequency count" }
+}},
+element tbody { $result } }
+}
+};
+
+(: format HTML table for Bulma, for lemmata :)
+(: result is structured as tr / td / content :)
+declare function grccom:table3($result, $lemma, $from, $to ){
+  element div {
+  attribute class {
+    "table-container"
+  },
+  element table { 
+attribute class { "striped"},
+element thead { 
+element tr {
+  element td { "Relations of " || $lemma || " (sentences with " || $from || " to " || $to || " elements)" },
+  element td { "Frequency count" }
+}},
+element tbody { $result } }
+}
+};
+
+(: show a subset of sentences without participles and AuxC relations, format as table :)
 declare function grccom:showsubsetnoptcpauxc($from, $to){
   let $result := grccom-analysis:selectnopartauxc($from, $to)
-return element div {
-  attribute class {
-    "table-container"
-  },
-  element table { 
-attribute class { "table is-striped is-hoverable"},
-element thead { 
-element tr {
-  element td { "Text"},
-  element td { "Treebanks (total: " || format-number(count($result/td[1]), ",###")  || " of " || format-number(grccom-analysis:counttreebanks (), ",###") || ")" }
-}},
-element tbody { $result } }
-}
+return grccom:table($result)
+};
+
+(: make HTML rows and cells from sequence :)
+declare function grccom:rows($cells){
+  element tr { for $c in $cells
+  return element td { $c } }
+};
+
+(: make HTML rows and cells from sequence of 2 :)
+declare function grccom:rows2($cells){
+  element tr { 
+  element td { $cells[1] },
+  element td { $cells[2] }
+   }
+};
+
+(: format HTML link :)
+declare function grccom:link($text, $link){
+  element a { attribute href {$link} , $text }
 };

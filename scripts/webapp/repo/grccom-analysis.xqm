@@ -1,5 +1,6 @@
 (: XQuery module for Greek complexity analyses :)
 module namespace grccom-analysis = 'http://croala.ffzg.unizg.hr/grccom-analysis';
+import module namespace grccom = "http://croala.ffzg.unizg.hr/grccom" at "grccom.xqm";
 
 (: Get basic information about the database: how many words, sentences, documents :)
 declare variable $grccom-analysis:db := ( 
@@ -124,4 +125,36 @@ element tr {
 },
 element td { element p { "Treebanks (total: " || count($function/*:td[1])  || ")" } } } },
 element tbody { $function } } }
+};
+
+(: retrieve lemmata, sort them by frequency, use Greek collation :)
+declare function grccom-analysis:sortlem($words){
+  for $w in $words
+let $l := $w/@lemma/string()
+group by $l
+order by $l collation "?lang=el"
+return grccom:rows2(( grccom:link( $l , "/grccom-lemma/12/18/" || $l ) , count($w) ))
+};
+
+(: retrieve words from a subset of sentences based on word count :)
+declare function grccom-analysis:getwords($from, $to){
+  for $s in db:get($grccom-analysis:db)//*:sentence
+where $from <= count($s/*:word) and count($s/*:word) <= $to
+return $s/*:word
+};
+
+(: retrieve relations of lemma from a subset of sentences based on word count :)
+declare function grccom-analysis:lemmaset($from, $to, $lemma){
+  for $s in db:get($grccom-analysis:db)//*:sentence[*:word/@lemma=$lemma]
+where $from <= count($s/*:word) and count($s/*:word) <= $to
+return $s/*:word[@lemma=$lemma]
+};
+
+(: retrieve lemmata, sort them by frequency :)
+declare function grccom-analysis:sortrelation($words){
+  for $w in $words
+let $l := $w/@relation/string()
+group by $l
+order by count($w) descending
+return grccom:rows(( $l , count($w) ))
 };
