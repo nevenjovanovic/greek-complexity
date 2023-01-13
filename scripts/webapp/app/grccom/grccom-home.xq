@@ -53,7 +53,7 @@ declare
 </div>
 </div>
 <hr/>
-{ grccom:footerchota() }
+{ grccom:footerchota($grccom:imglink1) }
 </body>
 </html>
 };

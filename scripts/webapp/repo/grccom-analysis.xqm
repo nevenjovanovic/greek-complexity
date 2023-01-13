@@ -136,6 +136,16 @@ order by $l collation "?lang=el"
 return grccom:rows2(( grccom:link( $l , "/grccom-lemma/12/18/" || $l ) , count($w) ))
 };
 
+(: retrieve lemmata, sort them by frequency, use Greek collation :)
+declare function grccom-analysis:sortlempos($words, $from , $to){
+  for $w in $words
+let $l := $w/@lemma/string()
+let $pos := substring($w/@postag/string(), 0, 2)
+group by $l
+order by $l collation "?lang=el"
+return grccom:rows2pos(( grccom:link( $l , "/grccom-lemma/" || $from || "/" || $to || "/" || $l ) , string-join(distinct-values($pos), ", ") , count($w) ))
+};
+
 (: retrieve words from a subset of sentences based on word count :)
 declare function grccom-analysis:getwords($from, $to){
   for $s in db:get($grccom-analysis:db)//*:sentence
@@ -156,5 +166,5 @@ declare function grccom-analysis:sortrelation($words){
 let $l := $w/@relation/string()
 group by $l
 order by count($w) descending
-return grccom:rows(( $l , count($w) ))
+return element tr { element td { $l } , element td { count($w) }}
 };

@@ -35,16 +35,18 @@ declare
 <p class="bg-light">Punctuation is omitted from token count. Sentences with artificial insertions (ellipses) are omitted from the subset.</p>
 	{ 
   grccom:table3(
-  grccom:rows2(
+  grccom:rows3(
+let $result :=
 let $words := grccom-analysis:lemmaset($from, $to, $lemma)
 return grccom-analysis:sortrelation($words)
+return $result , $from , $to , $lemma
 ), $lemma , $from , $to
 )
      }
 </div>
 </div>
 <hr/>
-{ grccom:footerchota() }
+{ grccom:footerchota($grccom:imglink4) }
 </body>
 </html>
 };

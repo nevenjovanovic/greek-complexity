@@ -2,6 +2,12 @@
 module namespace grccom = 'http://croala.ffzg.unizg.hr/grccom';
 import module namespace grccom-analysis = "http://croala.ffzg.unizg.hr/grccom-analysis" at "grccom-analysis.xqm";
 
+declare variable $grccom:imglink1 := <img src="/static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
+declare variable $grccom:imglink2 := <img src="../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
+declare variable $grccom:imglink3 := <img src="../../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
+declare variable $grccom:imglink4 := <img src="../../../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
+declare variable $grccom:imglink5 := <img src="../../../../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
+
 (: helper function for header, with meta :)
 declare function grccom:htmlheadserver($title, $content, $keywords) {
   (: return html template to be filled with title :)
@@ -31,7 +37,7 @@ declare function grccom:htmlheadchota($title, $content, $keywords) {
 <meta name="author" content="Neven Jovanović, CroALa" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" href="../../static/gfx/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="https://unpkg.com/chota@latest" />
+<link rel="stylesheet" href="/static/dist/chota.min.css" />
 </head>
 
 };
@@ -111,8 +117,8 @@ return $f
 };
 
 (: formatting - footer :)
-declare function grccom:footerchota () {
-let $f := <footer class="container">
+declare function grccom:footerchota ( $imglink ) {
+( <footer class="container">
 <div class="row">
 <div class="col">
 <p class="text-center"><strong>Kompleksnost u grčkoj rečenici | Greek sentence complexity</strong></p>
@@ -123,7 +129,7 @@ let $f := <footer class="container">
 <p>Nina Čengić, Neven Jovanović, Petra Matović</p></div>
 <div class="col text-center">
 <p>Odsjek za klasičnu filologiju</p>
-<p><a href="http://www.ffzg.unizg.hr"><img src="/static/gfx/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> Filozofski fakultet</a> Sveučilišta u Zagrebu</p></div>
+<p><a href="http://www.ffzg.unizg.hr"> { $imglink } Filozofski fakultet</a> Sveučilišta u Zagrebu</p></div>
 <div class="col text-center">
 <p><a href="https://github.com/nevenjovanovic/greek-complexity">Github repository</a> for the Greek sentence complexity project</p></div>
 </div>
@@ -132,7 +138,7 @@ let $f := <footer class="container">
 </a></div>
 </div>
 </footer>
-return $f
+)
 };
 
 (: show a subset of sentences, format as table :)
@@ -183,6 +189,22 @@ element tbody { $result } }
 }
 };
 
+(: format HTML table for Chota, for lemmata :)
+(: result is structured as tr / td / content :)
+declare function grccom:tablechota2($result){
+  element table { 
+attribute class { "striped"},
+element thead { 
+element tr {
+  element td { "Lemma (Total: " || count($result/td[1]) || ")"},
+  element td { "POS tags of lemma"},
+  element td { "Frequency count" }
+}},
+element tbody { $result } 
+}
+};
+
+
 (: format HTML table for Bulma, for lemmata :)
 (: result is structured as tr / td / content :)
 declare function grccom:table3($result, $lemma, $from, $to ){
@@ -214,14 +236,38 @@ declare function grccom:rows($cells){
 };
 
 (: make HTML rows and cells from sequence of 2 :)
-declare function grccom:rows2($cells){
+declare function grccom:rows2($cells ){
   element tr { 
   element td { $cells[1] },
   element td { $cells[2] }
    }
 };
 
+(: make HTML rows and cells from sequence of 2 :)
+declare function grccom:rows2pos($cells ){
+  element tr { 
+  element td { $cells[1] },
+  element td { $cells[2] },
+  element td { $cells[3] }
+   }
+};
+
+(: make HTML rows and cells from sequence of 2 , pass parameterfs from, to, and lemma :)
+declare function grccom:rows3($cells , $from , $to , $lemma ){
+  for $c in $cells
+  return
+  element tr { 
+  element td { grccom:linkrel ( $c/td[1]/string() , "/grccom-l-relation" , $from , $to , $lemma ) },
+  $c/td[2]
+   }
+};
+
 (: format HTML link :)
 declare function grccom:link($text, $link){
   element a { attribute href {$link} , $text }
+};
+
+(: format HTML link :)
+declare function grccom:linkrel($text, $link, $from, $to, $lemma){
+  element a { attribute href { $link || "/" || $from || "/" || $to || "/" || $lemma || "/" || $text } , $text }
 };

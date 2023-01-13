@@ -26,25 +26,29 @@ declare
   (: HTML template starts here :)
 
 <html lang="en">
-{ grccom:htmlheadserver($title, $content, $keywords) }
+{ grccom:htmlheadchota($title, $content, $keywords) }
 <body>
-{ grccom:pagetitle ($title, $subtitle) }
+{ grccom:pagetitlechota ($title, $subtitle) }
 <div class="container">
-<div class="content is-medium">
+<div class="row">
+<div class="col">
 <p>Change the two numbers in the URL to change parameters for word count in sentences (default: 12 to 18).</p>
 <p>Punctuation is omitted from token count. Sentences with artificial insertions (ellipses) are omitted from the subset. First row shows empty values of @lemma attribute.</p>
+</div>
+</div>
+<div class="row">
+<div class="col">
 	{ 
-  grccom:table2(
-  grccom:rows(
+  grccom:tablechota2(
 let $words := grccom-analysis:getwords($from, $to)
-return grccom-analysis:sortlem($words)
-)
+return grccom-analysis:sortlempos($words, $from , $to)
 )
      }
 </div>
 </div>
+</div>
 <hr/>
-{ grccom:footerserver() }
+{ grccom:footerchota( $grccom:imglink4 ) }
 </body>
 </html>
 };
