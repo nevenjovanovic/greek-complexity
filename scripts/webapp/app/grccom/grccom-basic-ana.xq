@@ -28,16 +28,18 @@ declare
   (: HTML template starts here :)
 
 <html lang="en">
-{ grccom:htmlheadserver($title, $content, $keywords) }
+{ grccom:htmlheadchota($title, $content, $keywords) }
 <body>
-{ grccom:pagetitle ($title, $subtitle) }
+{ grccom:pagetitlechota ($title, $subtitle) }
 <div class="container">
-<div class="content is-large">
+<div class="row">
+<div class="col">
 	{ grccom-analysis:basicinfo() }
+  </div>
 </div>
 </div>
 <hr/>
-{ grccom:footerserver() }
+{ grccom:footerchota($grccom:imglink1) }
 </body>
 </html>
 };
