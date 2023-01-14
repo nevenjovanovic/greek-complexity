@@ -42,24 +42,24 @@ declare
   "grccom-subset-sent-some-co/10/12/PNOM": "Retrieve a subset of sentences where some word has PNOM_CO function", 
   "grccom-pred-coord-0/16": "Retrieve a subset based on number of words, with PRED and COORD dependent on sentence root",
   "grccom-lemmata-list/12/18": "List lemmata in a subset of sentences (default: 12 to 18 elements)",
-  "grccom-lemma/12/18/καί": "List relations (sentence functions) for a lemma (default: καί, 12 to 18 elements)" }
+  "grccom-lemma/12/18/καί": "List relations (sentence functions) for a lemma (default: καί, 12 to 18 elements)",
+  "grccom-l-relation/12/18/καί/PRED": "For relation of lemma, list sentences in subset (default: καί as PRED, 12 to 18 elements)" }
   let $list := map:for-each(
     $map ,
   function($key, $value) { element li {
     element a { attribute href {$key} , $value } }
   } )
-  return element ul { $list } }
+  return element ul { 
+  for $l in $list
+  order by $l
+  return $l } }
 </div>
 </div>
 </div>
 <hr/>
-{ grccom:footerchota($grccom:imglink1) }
+{ grccom:footerchota($grccom:imglinkserver) }
 </body>
 </html>
 };
 
 return
-
-
-
-

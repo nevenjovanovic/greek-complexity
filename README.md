@@ -28,6 +28,12 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 1. Which POS have role of PRED (and similar): [list-pred-types.xq](/scripts/xq/list-pred-types.xq)
 2. Which POS have role of COORD (and similar): [list-coord-types.xq](/scripts/xq/list-coord-types.xq)
 
+### Analyse lemmata and their functions
+
+1. For a subset of sentences (based on number of elements, words etc), list lemmata: [list-lemmata.xq](scripts/xq/list-lemmata.xq)
+2. For a lemma in a subset of sentences (based on number of elements), list its syntactic relations: [lemma-list-functions.xq](/scripts/xq/lemma-list-functions.xq)
+3. For a specific syntactic relation of lemma in a subset, list all sentences: [relation-lemma-12-18-words.xq](/scripts/xq/relation-lemma-12-18-words.xq)
+
 ### Retrieve specific syntactic features
 
 1. Find sentences with all basic roles (PRED, SBJ, OBJ, ADV): [find-sentences-all-basic-roles.xq](/scripts/xq/find-sentences-all-basic-roles.xq)
@@ -88,11 +94,24 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 
 # On a server
 
-1. [Retrieve a subset of sentences](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent/12/18)
+1. [Landing page with list of functions](https://croala.ffzg.unizg.hr/basex/greek-complexity)
+4. [Basic information on treebanks](https://croala.ffzg.unizg.hr/basex/grccom-basic)
+2. [Retrieve a subset of sentences](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent/12/18)
+3. [List lemmata in a subset of sentences (default: 12 to 18 elements)](https://croala.ffzg.unizg.hr/basex/grccom-lemmata-list/12/18)
+4. [List relations (sentence functions) for a lemma (default: καί, 12 to 18 elements)](https://croala.ffzg.unizg.hr/basex/grccom-lemma/12/18/%CE%BA%CE%B1%CE%AF)
+5. [For relation of lemma, list sentences in subset (default: καί as PRED, 12 to 18 elements)](https://croala.ffzg.unizg.hr/basex/grccom-l-relation/12/18/%CE%BA%CE%B1%CE%AF/PRED)
 2. [Retrieve a subset of sentences without participles and subordinate conjunctions](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptcauxc/12/18)
 3. [Retrieve a subset of sentences without participles](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptc/12/18)
 4. [Retrieve a subset based on number of words, with PRED and COORD dependent on sentence root](https://croala.ffzg.unizg.hr/basex/grccom-pred-coord-0/16)
-4. [Basic information on treebanks](https://croala.ffzg.unizg.hr/basex/grccom-basic)
+
+# Modules and functions for web application (RESTXQ)
+
+1. Modules (xqm, directory `/scripts/webapp/repo/`)
+   1. Functions for analysing treebanks (in general): [grccom-analysis.xqm](/scripts/webapp/repo/grccom-analysis.xqm)
+   2. Functions for displaying HTML (in general): [grccom.xqm](/scripts/webapp/repo/grccom.xqm)
+2. Functions for individual pages (xq, directory `/scripts/webapp/app/grccom`)
+   1. Landing page: [grccom-home.xq](/scripts/webapp/app/grccom/grccom-home.xq)
+   2. Basic information on database: [grccom-basic-ana.xq](/scripts/webapp/app/grccom/grccom-basic-ana.xq)
 
 # AGDT data format
 
