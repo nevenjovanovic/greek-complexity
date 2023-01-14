@@ -168,3 +168,27 @@ group by $l
 order by count($w) descending
 return element tr { element td { $l } , element td { count($w) }}
 };
+
+(: for lemma, retrieve specific relation in subset :)
+(: select a subset of sentences :)
+declare function grccom-analysis:selectsentsrel($lemma, $relation, $from, $to){
+  for $sentence in db:open($grccom-analysis:db)//*:sentence[*:word[@lemma=$lemma and @relation=$relation]]
+where $from <= count($sentence/*:word[not(@lemma="punc1")]) and count($sentence/*:word[not(@lemma="punc1")]) <= $to
+return element div { 
+attribute class { "row" },
+element div { 
+attribute class { "col"} ,
+element div {
+  attribute class { "card"},
+grccom-analysis:metad($sentence) },
+element p {
+  attribute style { "font-size:2vw" },
+grccom-analysis:words($sentence) }
+},
+element div { 
+attribute class { "col"} ,
+element pre {
+fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()}) }
+}
+}
+};

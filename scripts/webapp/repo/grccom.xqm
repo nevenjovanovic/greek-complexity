@@ -2,6 +2,7 @@
 module namespace grccom = 'http://croala.ffzg.unizg.hr/grccom';
 import module namespace grccom-analysis = "http://croala.ffzg.unizg.hr/grccom-analysis" at "grccom-analysis.xqm";
 
+declare variable $grccom:imglinkserver := <img src="https:/croala.ffzg.unizg.hr/basex/static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink1 := <img src="/static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink2 := <img src="../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink3 := <img src="../../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
@@ -199,6 +200,20 @@ element tr {
   element td { "Lemma (Total: " || count($result/td[1]) || ")"},
   element td { "POS tags of lemma"},
   element td { "Frequency count" }
+}},
+element tbody { $result } 
+}
+};
+
+(: format HTML table for Chota, for sentences :)
+(: Metadata, readable text, XML :)
+declare function grccom:tablechotasent($result){
+  element table { 
+attribute class { "striped"},
+element thead { 
+element tr {
+  element td { "Sentence"},
+  element td { "XML treebank"}
 }},
 element tbody { $result } 
 }
