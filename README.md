@@ -96,12 +96,13 @@ In BaseX, run the script [create-grccomp-db.xq](/scripts/xq/create-grccomp-db.xq
 
 1. [Landing page with list of functions](https://croala.ffzg.unizg.hr/basex/greek-complexity)
 4. [Basic information on treebanks](https://croala.ffzg.unizg.hr/basex/grccom-basic)
-2. [Retrieve a subset of sentences](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent/12/18)
+2. [Retrieve a subset of sentences based on word count (default: 12 to 18 elements)](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent/12/18)
 3. [List lemmata in a subset of sentences (default: 12 to 18 elements)](https://croala.ffzg.unizg.hr/basex/grccom-lemmata-list/12/18)
 4. [List relations (sentence functions) for a lemma (default: καί, 12 to 18 elements)](https://croala.ffzg.unizg.hr/basex/grccom-lemma/12/18/%CE%BA%CE%B1%CE%AF)
 5. [For relation of lemma, list sentences in subset (default: καί as PRED, 12 to 18 elements)](https://croala.ffzg.unizg.hr/basex/grccom-l-relation/12/18/%CE%BA%CE%B1%CE%AF/PRED)
-2. [Retrieve a subset of sentences without participles and subordinate conjunctions](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptcauxc/12/18)
 3. [Retrieve a subset of sentences without participles](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptc/12/18)
+2. [Retrieve a subset of sentences without participles and subordinate conjunctions](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptcauxc/12/18)
+4. [Retrieve a subset of sentences without participles, infinitives, and subordinate conjunctions](https://croala.ffzg.unizg.hr/basex/grccom-subset-sent-no-ptcinfauxc/12/18)
 4. [Retrieve a subset based on number of words, with PRED and COORD dependent on sentence root](https://croala.ffzg.unizg.hr/basex/grccom-pred-coord-0/16)
 
 # Modules and functions for web application (RESTXQ)

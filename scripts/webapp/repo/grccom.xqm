@@ -2,12 +2,18 @@
 module namespace grccom = 'http://croala.ffzg.unizg.hr/grccom';
 import module namespace grccom-analysis = "http://croala.ffzg.unizg.hr/grccom-analysis" at "grccom-analysis.xqm";
 
-declare variable $grccom:imglinkserver := <img src="https:/croala.ffzg.unizg.hr/basex/static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
+declare variable $grccom:imglinkserver := <img src="/basex/static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink1 := <img src="/static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink2 := <img src="../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink3 := <img src="../../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink4 := <img src="../../../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
 declare variable $grccom:imglink5 := <img src="../../../../static/ffzghrlogo.png" alt="Logo Filozofskog fakulteta"/> ;
+
+declare variable $grccom:sentrelserver := "/basex/grccom-l-relation";
+declare variable $grccom:sentrellocal := "/grccom-l-relation";
+
+declare variable $grccom:cssserver := "/basex/static/dist/chota.min.css";
+declare variable $grccom:csslocal := "/static/dist/chota.min.css";
 
 (: helper function for header, with meta :)
 declare function grccom:htmlheadserver($title, $content, $keywords) {
@@ -272,7 +278,7 @@ declare function grccom:rows3($cells , $from , $to , $lemma ){
   for $c in $cells
   return
   element tr { 
-  element td { grccom:linkrel ( $c/td[1]/string() , "/grccom-l-relation" , $from , $to , $lemma ) },
+  element td { grccom:linkrel ( $c/td[1]/string() , $grccom:sentrellocal , $from , $to , $lemma ) },
   $c/td[2]
    }
 };
@@ -285,4 +291,10 @@ declare function grccom:link($text, $link){
 (: format HTML link :)
 declare function grccom:linkrel($text, $link, $from, $to, $lemma){
   element a { attribute href { $link || "/" || $from || "/" || $to || "/" || $lemma || "/" || $text } , $text }
+};
+
+(: no participles, infinitives, subordination :)
+declare function grccom:showsubset-noptcp-inf-auxc( $from, $to ) {
+  let $result := grccom-analysis:selectnopart-inf-auxc($from, $to)
+return grccom:table($result)
 };

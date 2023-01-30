@@ -67,6 +67,21 @@ element td { element pre {
 }
 };
 
+(: select a subset without participles, infinitives :)
+declare function grccom-analysis:selectnopartinf($from , $to){
+  for $sentence in db:open($grccom-analysis:db)//*:sentence[(not(*:word[@insertion_id]) or not(*:word[@artificial])) and not(*:word[matches(@postag, "....[pn]....")])]
+where $from <= count($sentence/*:word[not(@lemma="punc1")]) and count($sentence/*:word[not(@lemma="punc1")]) <= $to
+return element tr { 
+element td { element p { 
+attribute class { "box is-size-6" },
+grccom-analysis:metad($sentence) }, 
+grccom-analysis:words($sentence) },
+element td { element pre {
+  fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()})
+} }
+}
+};
+
 (: select a subset without participles and AuxC :)
 declare function grccom-analysis:selectnopartauxc($from , $to){
   for $sentence in db:open($grccom-analysis:db)//*:sentence[(not(*:word[@insertion_id]) or not(*:word[@artificial])) and not(*:word[matches(@postag, "....p....")]) and not(*:word[matches(@relation,"AuxC")])]
@@ -190,5 +205,21 @@ attribute class { "col"} ,
 element pre {
 fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()}) }
 }
+}
+};
+
+(: no participles, infinitives, auxc :)
+(: select a subset without participles and AuxC :)
+declare function grccom-analysis:selectnopart-inf-auxc($from , $to){
+  for $sentence in db:open($grccom-analysis:db)//*:sentence[(not(*:word[@insertion_id]) or not(*:word[@artificial])) and not(*:word[matches(@postag, "....[pn]....")]) and not(*:word[matches(@relation,"AuxC")])]
+where $from <= count($sentence/*:word[not(@lemma="punc1")]) and count($sentence/*:word[not(@lemma="punc1")]) <= $to
+return element tr { 
+element td { element p { 
+attribute class { "box is-size-6" },
+grccom-analysis:metad($sentence) }, 
+grccom-analysis:words($sentence) },
+element td { element pre {
+  fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()})
+} }
 }
 };
