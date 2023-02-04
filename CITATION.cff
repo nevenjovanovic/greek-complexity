@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this collection of scripts and data, please cite it as below."
+authors:
+  - family-names: Jovanović
+    given-names: Neven
+    orcid: https://orcid.org/0000-0002-9119-399X
+title: nevenjovanovic/greek-complexity: Complexity in Ancient Greek Treebanks, First Set of Queries (number of elements, lemmata, relations)
+version: v1.0.0
+date-released: 2023-01-14
