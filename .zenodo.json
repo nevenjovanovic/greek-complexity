@@ -1,0 +1,27 @@
+{
+    "description": "<p>Data, queries and RESTXQ scripts to:</p>\n<ul>\n<li>Create the database</li>\n<li>Show basic information</li>\n<li>Create a subset based on number of sentence elements</li>\n<li>List lemmata of the subset</li>\n<li>For lemma, list relations</li>\n<li>For relation of lemma, list all sentences where it occurs</li>\n<li>Also, a set of syntactic queries for various combinations of POS and relations</li>\n</ul>", 
+    "license": "other-open", 
+    "title": "nevenjovanovic/greek-complexity: First set of queries (number of elements, lemmata, relations)", 
+    "version": "v1.0.0", 
+    "upload_type": "software", 
+    "publication_date": "2023-01-14", 
+    "creators": [
+        {
+            "name": "Neven Jovanović",
+            "name": "Nina Čengić"
+        }
+    ], 
+    "access_right": "open", 
+    "related_identifiers": [
+        {
+            "scheme": "url", 
+            "identifier": "https://github.com/nevenjovanovic/greek-complexity/tree/v1.0.0", 
+            "relation": "isSupplementTo"
+        }, 
+        {
+            "scheme": "doi", 
+            "identifier": "10.5281/zenodo.7537308", 
+            "relation": "isVersionOf"
+        }
+    ]
+}
