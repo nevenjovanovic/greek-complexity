@@ -209,9 +209,9 @@ fn:serialize($sentence, map{"method":"xml", "omit-xml-declaration":true()}) }
 };
 
 (: no participles, infinitives, auxc :)
-(: select a subset without participles and AuxC :)
+(: select a subset without participles, AuxY and AuxC :)
 declare function grccom-analysis:selectnopart-inf-auxc($from , $to){
-  for $sentence in db:open($grccom-analysis:db)//*:sentence[(not(*:word[@insertion_id]) or not(*:word[@artificial])) and not(*:word[matches(@postag, "....[pn]....")]) and not(*:word[matches(@relation,"AuxC")])]
+  for $sentence in db:open($grccom-analysis:db)//*:sentence[(not(*:word[@insertion_id]) or not(*:word[@artificial])) and not(*:word[matches(@postag, "....[pn]....")]) and not(*:word[@relation=("AuxC","AuxY")]) and not(*:word[@lemma="ὅς"])]
 where $from <= count($sentence/*:word[not(@lemma="punc1")]) and count($sentence/*:word[not(@lemma="punc1")]) <= $to
 return element tr { 
 element td { element p { 
