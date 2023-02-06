@@ -1,10 +1,25 @@
-(: How many words in sentences, mean :)
+(: How many words in sentences, group by word count :)
 (: Omit punctuation :)
-let $s := db:get("grc-com")//*:sentence
-let $scount := count($s)
+let $result := element tbody {
+for $s in db:get("grc-com")//*:sentence
 let $wcount := count($s//*:word[not(@lemma="punc1")])
+group by $wcount
+order by $wcount descending
 return element tr {
-  element td { $scount },
   element td { $wcount },
-  element td { $wcount div $scount }
+  element td { count($s) }
+}
+}
+return element table {
+  element thead {
+    element tr {
+      element td {
+        "WC"
+      },
+      element td {
+        "SC"
+      }
+    }
+  },
+  $result
 }
